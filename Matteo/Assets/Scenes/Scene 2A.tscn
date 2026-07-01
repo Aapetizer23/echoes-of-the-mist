@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bfbas47d66vpv"]
+[gd_scene format=3 uid="uid://bixagjw5j43ec"]
 
-[ext_resource type="Script" uid="uid://drpbsy654fep3" path="res://Matteo/Assets/Scripts/scene_2.gd" id="1_jwwf3"]
-[ext_resource type="Texture2D" uid="uid://cir0q7xmijjng" path="res://Matteo/Assets/Sprites/300px-Dungeon_background.webp" id="2_hyq72"]
+[ext_resource type="Script" uid="uid://01cs4krleqgk" path="res://Matteo/Assets/Scripts/scene_2a.gd" id="1_w4yoe"]
+[ext_resource type="Texture2D" uid="uid://bxiibljhlcr2f" path="res://Matteo/Assets/Sprites/120px-Void_background2.webp" id="2_h01c8"]
 
 [node name="Control" type="Control" unique_id=1927963025]
 layout_mode = 3
@@ -10,27 +10,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jwwf3")
+script = ExtResource("1_w4yoe")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=435261859]
 layout_mode = 0
 offset_left = 166.0
 offset_right = 965.0
 offset_bottom = 647.0
-texture = ExtResource("2_hyq72")
+texture = ExtResource("2_h01c8")
 
 [node name="Label" type="Label" parent="." unique_id=1284889581]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Scene 2"
+text = "Scene 2A"
 
-[node name="Button" type="Button" parent="Label" unique_id=965374639]
+[node name="Button" type="Button" parent="Label" unique_id=1981543608]
 layout_mode = 0
-offset_left = 564.0
-offset_top = 151.0
-offset_right = 678.0
-offset_bottom = 247.0
-text = "Proceed"
+offset_left = 515.0
+offset_top = 539.0
+offset_right = 629.0
+offset_bottom = 635.0
+text = "Turn Around"
 
 [connection signal="button_down" from="Label/Button" to="." method="_on_button_button_down"]
