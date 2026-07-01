@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dekqfsb3cxqn3"]
 
 [ext_resource type="Script" uid="uid://cdpa6gs3xnves" path="res://Matteo/Assets/Scripts/scene_1.gd" id="1_ohs78"]
-[ext_resource type="Texture2D" uid="uid://cupw01ypklfy2" path="res://Matteo/Assets/Sprites/Fortress_background.png" id="2_3femc"]
+[ext_resource type="Texture2D" uid="uid://cir0q7xmijjng" path="res://Matteo/Assets/Sprites/300px-Dungeon_background.webp" id="2_3femc"]
 
 [node name="Control" type="Control" unique_id=143459725]
 layout_mode = 3
@@ -27,10 +27,10 @@ text = "Scene 1"
 
 [node name="Button" type="Button" parent="Label" unique_id=319632069]
 layout_mode = 0
-offset_left = 490.0
-offset_top = 79.0
-offset_right = 604.0
-offset_bottom = 175.0
-text = "Proceed"
+offset_left = 32.0
+offset_top = 281.0
+offset_right = 146.0
+offset_bottom = 377.0
+text = "Turn left"
 
 [connection signal="button_down" from="Label/Button" to="." method="_on_button_button_down"]

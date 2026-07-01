@@ -3,4 +3,4 @@ extends Control
 
 
 func _on_button_button_down() -> void:
-	get_tree().change_scene_to_file("res://Matteo/Assets/Scenes/Scene 3.tscn")
+	get_tree().change_scene_to_file("res://Matteo/Assets/Scenes/Scene 1.tscn")
