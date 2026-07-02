@@ -6244,7 +6244,7 @@ scale = Vector2(18, 18)
 shape = SubResource("CapsuleShape2D_7x5o3")
 
 [node name="Cooldown" type="Timer" parent="Hurtbox" unique_id=869566641]
-wait_time = 0.1
+wait_time = 0.5
 one_shot = true
 
 [node name="BlockSP" type="Timer" parent="Hurtbox" unique_id=276224961]

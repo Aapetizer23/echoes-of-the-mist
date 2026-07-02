@@ -12,6 +12,7 @@ const ENEMY = preload("uid://hl7g2dvajebj")
 @onready var played: bool = true
 
 func _process(delta: float) -> void:
+	player = $"../Node2D/Game/Player"
 	if dead == true:
 		get_tree().reload_current_scene()
 		await get_tree().tree_changed
@@ -21,4 +22,3 @@ func _process(delta: float) -> void:
 		sp = 20
 		enemynumber = 0
 		cash = 0
-		player = $"../Node2D/Game/Player"

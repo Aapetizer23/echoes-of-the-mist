@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bsdfr52tf1j6x"]
+
+[ext_resource type="Texture2D" uid="uid://bqyb6lsryede7" path="res://Matteo/Assets/Sprites/Flip_side_background.png" id="1_btry1"]
+[ext_resource type="Script" uid="uid://bovewiy124s6q" path="res://Matteo/Assets/Scripts/scene_5.gd" id="1_u3xwb"]
+
+[node name="Control" type="Control" unique_id=1927963025]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3xwb")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=435261859]
+layout_mode = 0
+offset_left = 166.0
+offset_right = 965.0
+offset_bottom = 647.0
+texture = ExtResource("1_btry1")
+
+[node name="Label" type="Label" parent="." unique_id=1284889581]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Scene 5"
+
+[node name="Button" type="Button" parent="Label" unique_id=863736846]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 279.0
+offset_right = 312.0
+offset_bottom = 375.0
+text = "Turn Left"
+
+[node name="Button2" type="Button" parent="Label" unique_id=1319951796]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 33.0
+offset_right = 624.0
+offset_bottom = 129.0
+text = "Proceed"
+
+[node name="Button3" type="Button" parent="Label" unique_id=2007904936]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 278.0
+offset_right = 945.0
+offset_bottom = 374.0
+text = "Turn Right"
+
+[node name="Button4" type="Button" parent="Label" unique_id=568573597]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 585.0
+offset_right = 624.0
+offset_bottom = 631.0
+text = "Back"
+
+[connection signal="button_down" from="Label/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Label/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Label/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Label/Button4" to="." method="_on_button_4_button_down"]
