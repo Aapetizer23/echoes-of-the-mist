@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://ckrd3dmts30h3"]
+
+[ext_resource type="Script" uid="uid://hlwu0upe6pou" path="res://Dylan/back.gd" id="1_sbj2y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g41wf"]
+font_size = 96
+font_color = Color(0.6154188, 0.5837295, 0.59596306, 1)
+outline_size = 12
+
+[node name="Credits" type="Control" unique_id=1286501162]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=399454077]
+follow_viewport_enabled = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=897724779]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Back" type="Button" parent="CanvasLayer/Panel" unique_id=395880103]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 470.0
+offset_right = 780.0
+offset_bottom = 621.0
+text = "BACK"
+script = ExtResource("1_sbj2y")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=1657357762]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 111.0
+offset_right = 1014.0
+offset_bottom = 369.0
+text = "Dylan, Matteo
+TEST TEXT"
+label_settings = SubResource("LabelSettings_g41wf")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Panel/Back" to="CanvasLayer/Panel/Back" method="_on_pressed"]

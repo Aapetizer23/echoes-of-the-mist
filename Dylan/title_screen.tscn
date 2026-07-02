@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://utbnkw12edhr"]
+
+[ext_resource type="Script" uid="uid://cryxp7tfprbx5" path="res://Dylan/button.gd" id="1_2gkjl"]
+[ext_resource type="Script" uid="uid://dlp28x7r45odp" path="res://Dylan/credits.gd" id="2_o7q6f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2gkjl"]
+font_size = 96
+font_color = Color(0.6154188, 0.5837295, 0.59596306, 1)
+outline_size = 12
+
+[node name="TitleScreen" type="Control" unique_id=648584784]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1583939911]
+follow_viewport_enabled = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=462101666]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="Button" parent="CanvasLayer/Panel" unique_id=2124032528]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 299.0
+offset_right = 780.0
+offset_bottom = 450.0
+text = "START"
+script = ExtResource("1_2gkjl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="Button" parent="CanvasLayer/Panel" unique_id=524359605]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 470.0
+offset_right = 780.0
+offset_bottom = 621.0
+text = "CREDITS"
+script = ExtResource("2_o7q6f")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=15012534]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 111.0
+offset_right = 1014.0
+offset_bottom = 369.0
+text = "Echoes Of The Mist"
+label_settings = SubResource("LabelSettings_2gkjl")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Panel/Start" to="CanvasLayer/Panel/Start" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Credits" to="CanvasLayer/Panel/Credits" method="_on_pressed"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Echoes of the Mist"
-run/main_scene="uid://dekqfsb3cxqn3"
+run/main_scene="uid://utbnkw12edhr"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
