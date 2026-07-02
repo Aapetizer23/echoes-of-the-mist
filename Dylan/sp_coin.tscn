@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b0a4tw4nhpwju"]
+
+[ext_resource type="Script" uid="uid://xf8aewghiquj" path="res://Dylan/sprite_2d.gd" id="1_n1tyx"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2u0k8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itb63"]
+size = Vector2(10.5, 10.5)
+
+[node name="SPCoin" type="Node2D" unique_id=1070280162]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1284848147]
+scale = Vector2(9.5, 9.5)
+texture = SubResource("PlaceholderTexture2D_2u0k8")
+script = ExtResource("1_n1tyx")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=64520064]
+scale = Vector2(0.10526316, 0.10526316)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=85151255]
+shape = SubResource("RectangleShape2D_itb63")
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_body_entered"]

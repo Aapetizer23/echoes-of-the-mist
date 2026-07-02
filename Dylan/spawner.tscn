@@ -8,7 +8,7 @@
 script = ExtResource("1_rulnk")
 
 [node name="SpawnerCooldown" type="Timer" parent="Marker2D" unique_id=1506156289]
-wait_time = 5.0
+wait_time = 15.0
 autostart = true
 
 [connection signal="timeout" from="Marker2D/SpawnerCooldown" to="Marker2D" method="_on_spawner_cooldown_timeout"]

@@ -9,9 +9,10 @@ func _process(delta: float) -> void:
 	tween.tween_property(self, "value", GlobalData.sp, 0.2).set_trans(Tween.TRANS_BOUNCE)
 	if GlobalData.sp >= 0:
 		label.text = "SP: " + str(GlobalData.sp)
+		progress_bar.max_value = 20 + GlobalData.extrasp
 
 
 
 func _on_sp_refill_timeout() -> void:
-	if GlobalData.sp < 20:
+	if GlobalData.sp < 20 + GlobalData.extrasp:
 		GlobalData.sp = GlobalData.sp + 1

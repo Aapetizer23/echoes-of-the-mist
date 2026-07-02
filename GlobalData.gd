@@ -10,6 +10,7 @@ const ENEMY = preload("uid://hl7g2dvajebj")
 @onready var enemynumber: int = 0
 @onready var blocking: bool = false
 @onready var played: bool = true
+@onready var extrasp: int = 0
 
 func _process(delta: float) -> void:
 	player = $"../Node2D/Game/Player"
@@ -21,4 +22,5 @@ func _process(delta: float) -> void:
 		health = 20
 		sp = 20
 		enemynumber = 0
+		extrasp = 0
 		cash = 0
