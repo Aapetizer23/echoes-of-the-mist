@@ -2,14 +2,17 @@ extends ProgressBar
 
 @onready var label: Label = $"../Label"
 @onready var progress_bar: ProgressBar = $"."
+@onready var extra_stam: ProgressBar = $"../ExtraStam"
 
 
 func _process(delta: float) -> void:
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "value", GlobalData.sp, 0.2).set_trans(Tween.TRANS_BOUNCE)
+	if progress_bar.value <= 20:
+		tween.tween_property(self, "value", GlobalData.sp, 0.2).set_trans(Tween.TRANS_BOUNCE)
+	if progress_bar.value >= 20:
+		tween.tween_property(extra_stam, "value", GlobalData.sp - 20, 0.2).set_trans(Tween.TRANS_BOUNCE)
 	if GlobalData.sp >= 0:
 		label.text = "SP: " + str(GlobalData.sp)
-		progress_bar.max_value = 20 + GlobalData.extrasp
 
 
 

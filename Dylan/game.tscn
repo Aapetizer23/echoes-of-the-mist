@@ -543,6 +543,15 @@ script = ExtResource("5_cgkir")
 wait_time = 1.5
 autostart = true
 
+[node name="ExtraStam" type="ProgressBar" parent="CanvasLayer/Stamina" unique_id=1988816872]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 302.5
+offset_bottom = 99.0
+max_value = 30.0
+show_percentage = false
+
 [node name="Label" type="Label" parent="CanvasLayer/Stamina" unique_id=904016758]
 layout_mode = 0
 offset_left = 10.0
