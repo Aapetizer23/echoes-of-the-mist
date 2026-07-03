@@ -9,6 +9,16 @@
 [ext_resource type="Texture2D" uid="uid://bqq14cevgh8x7" path="res://Dylan/2D Character Knight/Spritesheets/Shadowless/Die_Shadowless.png" id="3_tah0p"]
 [ext_resource type="Texture2D" uid="uid://cy5aaobfuxo2y" path="res://Dylan/2D Character Knight/Spritesheets/Shadowless/Kick_Shadowless.png" id="5_0i8rl"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7x5o3"]
+radius = 38.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0i8rl"]
+radius = 23.021729
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7x5o3"]
+radius = 0.6111111
+height = 1.7777783
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ww0ke"]
 atlas = ExtResource("2_7x5o3")
 region = Rect2(0, 384, 64, 64)
@@ -6172,33 +6182,15 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7x5o3"]
-radius = 38.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_0i8rl"]
-radius = 23.021729
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7x5o3"]
-radius = 0.6111111
-height = 1.7777783
-
 [node name="Player" type="CharacterBody2D" unique_id=1678605382]
 top_level = true
 motion_mode = 1
 script = ExtResource("1_0cggj")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1809237679]
-texture_filter = 1
-scale = Vector2(1.3125, 1.3125)
-sprite_frames = SubResource("SpriteFrames_0cggj")
-animation = &"startblock_right"
-autoplay = "idle_front"
-
 [node name="Timer" type="Timer" parent="." unique_id=542777362]
 one_shot = true
 
 [node name="SwordBox" type="Area2D" parent="." unique_id=840778295]
-visible = false
 collision_layer = 4
 collision_mask = 4
 monitoring = false
@@ -6208,7 +6200,6 @@ monitorable = false
 shape = SubResource("CircleShape2D_7x5o3")
 
 [node name="KickBox" type="Area2D" parent="." unique_id=1816070862]
-visible = false
 collision_layer = 4
 collision_mask = 4
 monitoring = false
@@ -6234,7 +6225,6 @@ wait_time = 2.5
 one_shot = true
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1541507227]
-visible = false
 collision_layer = 11
 collision_mask = 11
 
@@ -6263,7 +6253,13 @@ collision_mask = 14
 shape = SubResource("CircleShape2D_0i8rl")
 disabled = true
 
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1809237679]
+texture_filter = 1
+scale = Vector2(1.3125, 1.3125)
+sprite_frames = SubResource("SpriteFrames_0cggj")
+animation = &"startblock_right"
+autoplay = "idle_front"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="KickTimer" to="." method="_on_kick_timer_timeout"]
@@ -6273,3 +6269,4 @@ disabled = true
 [connection signal="area_shape_exited" from="Hurtbox" to="." method="_on_hurtbox_area_shape_exited"]
 [connection signal="timeout" from="Hurtbox/Cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="timeout" from="Hurtbox/BlockSP" to="." method="_on_block_sp_timeout"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bfjxqbto1gcfk" path="res://daqffdm-daba6ead-1266-41b2-b490-21429cc9f31f-removebg-preview.png" id="2_ci6a2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7moqr"]
-radius = 78.0
+radius = 79.0
 height = 222.0
 
 [node name="Key" type="Node2D" unique_id=2051398032]
