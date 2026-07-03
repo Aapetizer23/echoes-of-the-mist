@@ -911,11 +911,11 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_3uxja")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=657850314]
+[node name="EnemyHit" type="Area2D" parent="." unique_id=657850314]
 collision_layer = 12
 collision_mask = 12
 
-[node name="HitBox" type="CollisionShape2D" parent="Area2D" unique_id=1938255089]
+[node name="HitBox" type="CollisionShape2D" parent="EnemyHit" unique_id=1938255089]
 shape = SubResource("CapsuleShape2D_rf5uo")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=812055019]
@@ -940,7 +940,7 @@ autoplay = "front"
 wait_time = 1.2
 one_shot = true
 
-[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="area_shape_entered" from="EnemyHit" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
 [connection signal="waypoint_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_waypoint_reached"]

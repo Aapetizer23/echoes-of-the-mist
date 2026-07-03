@@ -8,7 +8,7 @@ extends Marker2D
 
 
 func _on_spawner_cooldown_timeout() -> void:
-	if GlobalData.enemynumber < 20:
+	if GlobalData.enemynumber < 10:
 		var NewEnemy: CharacterBody2D = GlobalData.ENEMY.instantiate()
 		GlobalData.enemynumber = GlobalData.enemynumber + 1
 		print(GlobalData.enemynumber)

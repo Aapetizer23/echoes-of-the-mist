@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bvdrb572ptq6c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7i2eq"]
+font_size = 96
+font_color = Color(0.6154188, 0.5837295, 0.59596306, 1)
+outline_size = 12
+
+[node name="EndDemo" type="Control" unique_id=1872403927]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=475003497]
+follow_viewport_enabled = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=355274718]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=1073371462]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.06944445
+anchor_top = -0.0061728396
+anchor_right = 0.065972224
+anchor_bottom = 0.21604939
+offset_left = 136.0
+offset_top = 111.0
+offset_right = 1014.0
+offset_bottom = 369.0
+text = "YOU BEAT THE DEMO!
+
+Thank You for playing!"
+label_settings = SubResource("LabelSettings_7i2eq")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

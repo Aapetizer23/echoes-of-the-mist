@@ -334,7 +334,8 @@ func _on_wait_timeout() -> void:
 
 
 func _on_hurtbox_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-		hurt = true
+		if area.name.contains("EnemyHit"):
+			hurt = true
 
 
 func _on_hurtbox_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
