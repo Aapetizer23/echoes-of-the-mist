@@ -12,6 +12,8 @@ extends CharacterBody2D
 @onready var kick_box: Area2D = $KickBox
 @onready var kick_timer: Timer = $KickTimer
 @onready var block_sp: Timer = $Hurtbox/BlockSP
+@onready var block: StaticBody2D = $Block
+@onready var collision_shape_2d: CollisionShape2D = $Block/CollisionShape2D
 
 
 
@@ -264,6 +266,7 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("block") == true and Input.is_action_just_released("block") == false:
 		if GlobalData.health > 0 and GlobalData.sp > 1:
 			GlobalData.blocking = true
+			collision_shape_2d.disabled = false
 			block_sp.start()
 			attacking = true
 			if anim.animation.contains("right") == true:
@@ -302,6 +305,7 @@ func _physics_process(_delta: float) -> void:
 		if Input.is_action_just_released("block") == true:
 			GlobalData.blocking = false
 			attacking = false
+			collision_shape_2d.disabled = true
 			block_sp.stop()
 			anim.play("idle_" + animdir)
 
@@ -330,11 +334,11 @@ func _on_wait_timeout() -> void:
 
 
 func _on_hurtbox_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	hurt = true
+		hurt = true
 
 
 func _on_hurtbox_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	hurt = false
+		hurt = false
 
 
 func _on_cooldown_timeout() -> void:

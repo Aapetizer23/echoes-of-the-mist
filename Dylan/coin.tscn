@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cgvqgdexwwht0"]
+
+[ext_resource type="Script" uid="uid://bhwiahiqc6db5" path="res://coin.gd" id="1_lx3xu"]
+[ext_resource type="Texture2D" uid="uid://bfjxqbto1gcfk" path="res://daqffdm-daba6ead-1266-41b2-b490-21429cc9f31f-removebg-preview.png" id="2_ci6a2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7moqr"]
+radius = 78.0
+height = 222.0
+
+[node name="Key" type="Node2D" unique_id=2051398032]
+script = ExtResource("1_lx3xu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1083904791]
+texture = ExtResource("2_ci6a2")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1979491878]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=11440942]
+shape = SubResource("CapsuleShape2D_7moqr")
+
+[connection signal="area_shape_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_shape_entered"]

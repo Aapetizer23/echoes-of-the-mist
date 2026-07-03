@@ -11,6 +11,7 @@ const ENEMY = preload("uid://hl7g2dvajebj")
 @onready var blocking: bool = false
 @onready var played: bool = true
 @onready var extrasp: int = 0
+@onready var keycollected: bool = false
 
 func _process(delta: float) -> void:
 	player = $"../Node2D/Game/Player"
@@ -24,3 +25,4 @@ func _process(delta: float) -> void:
 		enemynumber = 0
 		extrasp = 0
 		cash = 0
+		keycollected = false
