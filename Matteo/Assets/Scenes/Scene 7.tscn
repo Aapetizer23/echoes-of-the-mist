@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://sr4bwmsjfboj" path="res://Matteo/Assets/Scripts/scene_7.gd" id="1_fhs7n"]
 [ext_resource type="Texture2D" uid="uid://d06ysgefw8ii3" path="res://Matteo/Assets/Sprites/Blood_pool_background.png" id="1_mkl0l"]
 [ext_resource type="PackedScene" uid="uid://bmkfqeuau83t4" path="res://Matteo/Assets/Scenes/torch.tscn" id="3_8cnh4"]
+[ext_resource type="Texture2D" uid="uid://dsm41unarxaqf" path="res://Matteo/Assets/Sprites/Torn Paper.png" id="4_kp3hn"]
+[ext_resource type="FontFile" uid="uid://dmielrubi7r1b" path="res://Matteo/Assets/Sprites/OldEnglishFive.ttf" id="5_iy2gr"]
 
 [node name="Control" type="Control" unique_id=916408463]
 layout_mode = 3
@@ -43,5 +45,31 @@ offset_bottom = 413.99997
 rotation = -0.46556795
 scale = Vector2(-4.791074, 4.791074)
 torch_ID = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1185458408]
+modulate = Color(0.56, 0.56, 0.56, 1)
+layout_mode = 0
+offset_left = 447.0
+offset_top = 460.39832
+offset_right = 1534.5083
+offset_bottom = 1329.1552
+rotation = -0.19900231
+scale = Vector2(0.15999877, 0.15999877)
+texture = ExtResource("4_kp3hn")
+
+[node name="Label2" type="Label" parent="." unique_id=978179244]
+modulate = Color(0.56, 0.56, 0.56, 1)
+layout_mode = 0
+offset_left = 478.0
+offset_top = 471.99997
+offset_right = 619.0
+offset_bottom = 592.0
+rotation = -0.19900231
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_iy2gr")
+theme_override_font_sizes/font_size = 15
+text = "Two eyes 
+need two lights 
+for true sight"
 
 [connection signal="button_down" from="Label/Button" to="." method="_on_button_button_down"]
