@@ -3285,7 +3285,7 @@ position = Vector2(-913, 992)
 scale = Vector2(0.75, 0.75)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1472358907]
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=326029309 groups=["navigation_polygon_source_geometry_group"]]
