@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cryxp7tfprbx5" path="res://Dylan/button.gd" id="1_2gkjl"]
 [ext_resource type="Script" uid="uid://dlp28x7r45odp" path="res://Dylan/credits.gd" id="2_o7q6f"]
+[ext_resource type="FontFile" uid="uid://dmielrubi7r1b" path="res://Matteo/Assets/Sprites/OldEnglishFive.ttf" id="3_fedg0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2gkjl"]
 font_size = 96
@@ -47,11 +48,17 @@ script = ExtResource("2_o7q6f")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=15012534]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.104166664
+anchor_top = -0.049382716
+anchor_right = 0.105034724
+anchor_bottom = -0.049382716
 offset_left = 136.0
 offset_top = 111.0
 offset_right = 1014.0
 offset_bottom = 369.0
+theme_override_fonts/font = ExtResource("3_fedg0")
 text = "Echoes Of The Mist"
 label_settings = SubResource("LabelSettings_2gkjl")
 horizontal_alignment = 1
