@@ -3168,6 +3168,9 @@ agent_radius = 15.0
 [sub_resource type="LabelSettings" id="LabelSettings_8067u"]
 font_size = 30
 
+[sub_resource type="LabelSettings" id="LabelSettings_mlgx0"]
+font_size = 18
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0to8x"]
 size = Vector2(104, 57)
 
@@ -3379,14 +3382,29 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Money" unique_id=1746282656]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 515.0
-offset_right = 458.0
-offset_bottom = 646.0
+offset_left = 687.0
+offset_top = 511.0
+offset_right = 1141.0
+offset_bottom = 642.0
 text = "Cash: NaN¥"
 label_settings = SubResource("LabelSettings_8067u")
+horizontal_alignment = 2
 vertical_alignment = 2
 script = ExtResource("5_ht1pe")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=738676049]
+offset_left = 10.0
+offset_top = 470.0
+offset_right = 345.0
+offset_bottom = 641.0
+text = "Controls:
+
+W/A/S/D = Move
+Left Mouse Click/Space = Sword Attack
+Right Mouse Click/Z = Kick
+Hold Shift = Block"
+label_settings = SubResource("LabelSettings_mlgx0")
+vertical_alignment = 2
 
 [node name="SPCoin" parent="." unique_id=1070280162 instance=ExtResource("8_uct6e")]
 position = Vector2(-1400, 397)
