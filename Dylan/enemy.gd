@@ -50,24 +50,6 @@ func move_enemy() -> void:
 		var next_path_position = navigation_agent_2d.get_next_path_position()
 		var direction = global_position.direction_to(next_path_position)
 		
-		if direction.x > 0 and direction.y > 0:
-			if direction.x > 0.5 and direction.y > 0.5:
-				animated_sprite_2d.play("se")
-			elif direction.x <= 0.5 and direction.y > 0.5:
-				animated_sprite_2d.play("back")
-			elif direction.x > 0.5 and direction.y <= 0.5:
-				animated_sprite_2d.play("right")
-			else:
-				animated_sprite_2d.play("nw")
-		if direction.x < 0 and direction.y < 0:
-			if direction.x < 0.5 and direction.y < 0.5:
-				animated_sprite_2d.play("left")
-			elif direction.x >= 0.5 and direction.y < 0.5:
-				animated_sprite_2d.play("front")
-			elif direction.x < 0.5 and direction.y >= 0.5:
-				animated_sprite_2d.play("sw")
-			else:
-				animated_sprite_2d.play("ne")
 
 		velocity = direction * current_speed
 		
@@ -101,8 +83,6 @@ func _physics_process(_delta: float) -> void:
 			animated_sprite_2d.play("front")
 		elif facing_direction == 7:
 			animated_sprite_2d.play("sw")
-	else:
-		animated_sprite_2d.play("death")
 		
 
 
