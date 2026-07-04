@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cgvqgdexwwht0" path="res://Dylan/coin.tscn" id="9_bn2dg"]
 [ext_resource type="PackedScene" uid="uid://dp87sy05kvtub" path="res://Dylan/door.tscn" id="10_qobd1"]
 [ext_resource type="Script" uid="uid://dn1qk2grhasr3" path="res://Dylan/win_area.gd" id="11_mlgx0"]
+[ext_resource type="AudioStream" uid="uid://by7jvqvo2tidu" path="res://25 Caught in a Loop.mp3" id="12_0to8x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlgx0"]
 texture = ExtResource("1_qobd1")
@@ -3407,7 +3408,7 @@ label_settings = SubResource("LabelSettings_mlgx0")
 vertical_alignment = 2
 
 [node name="SPCoin" parent="." unique_id=1070280162 instance=ExtResource("8_uct6e")]
-position = Vector2(-1400, 397)
+position = Vector2(-1476, 419)
 
 [node name="SPCoin2" parent="." unique_id=309968293 instance=ExtResource("8_uct6e")]
 position = Vector2(-1055, 547)
@@ -3416,8 +3417,8 @@ position = Vector2(-1055, 547)
 position = Vector2(-2154, 821)
 
 [node name="Key" parent="." unique_id=2051398032 instance=ExtResource("9_bn2dg")]
-position = Vector2(-1442.9998, 324.99997)
-scale = Vector2(0.1, 0.1)
+position = Vector2(-1370, 292)
+scale = Vector2(0.07, 0.07)
 
 [node name="Door" parent="." unique_id=1606757395 instance=ExtResource("10_qobd1")]
 position = Vector2(-2391, 152)
@@ -3429,6 +3430,11 @@ script = ExtResource("11_mlgx0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea" unique_id=1058697767]
 position = Vector2(-2392, 55)
 shape = SubResource("RectangleShape2D_0to8x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1725259883]
+stream = ExtResource("12_0to8x")
+autoplay = true
+parameters/looping = true
 
 [connection signal="timeout" from="CanvasLayer/Stamina/ProgressBar/SPRefill" to="CanvasLayer/Stamina/ProgressBar" method="_on_sp_refill_timeout"]
 [connection signal="area_shape_entered" from="WinArea" to="WinArea" method="_on_area_shape_entered"]

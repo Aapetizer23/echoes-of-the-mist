@@ -9,4 +9,4 @@ func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_inde
 	if area.name == "Hurtbox":
 		GlobalData.extrasp = GlobalData.extrasp + 10
 		print(GlobalData.extrasp)
-		queue_free()
+		self.get_parent().queue_free()
